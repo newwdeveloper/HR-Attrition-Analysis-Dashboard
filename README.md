@@ -1,5 +1,8 @@
 # Employee Attrition Dashboard
 
+**Live DashBoard**
+(https://app.powerbi.com/reportEmbed?reportId=c20cc76f-d37d-4945-a7d2-b5b8f8058fad&autoAuth=true&ctid=c6e549b3-5f45-4032-aae9-d4244dc5b2c4)
+
 ## Project Overview
 This project analyzes employee attrition using the IBM HR Analytics Dataset, built with Power BI to uncover why employees leave and propose retention strategies. The interactive dashboard explores demographics, job satisfaction, compensation, and career development, delivering actionable insights to reduce turnover costs.
 
