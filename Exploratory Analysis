@@ -1,0 +1,34 @@
+# Exploratory Data Analysis for Employee Attrition Dashboard
+
+## Dataset
+- **Source**: IBM HR Analytics Employee Attrition Dataset ([Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)).
+- **Size**: 1,470 rows, 35 columns (e.g., Age, JobSatisfaction, MonthlyIncome, Attrition).
+
+## Data Cleaning
+- **Power Query Steps**:
+  - Removed null values in `JobSatisfaction` (less than 1% missing).
+  - Encoded categorical variables (e.g., `Attrition: Yes/No` to 1/0 for calculations).
+  - Created derived columns, like `Tenure_Bucket` (e.g., 0-3 years, 4-7 years).
+- **Challenges**: Handled inconsistent formats in `Education` field by standardizing to numerical scale.
+
+## Exploratory Data Analysis
+- **Attrition Rate**: 16% overall, with Sales (20%) and R&D (18%) highest.
+- **Demographics**: Age 18-25 has 25% attrition; bachelor’s degree holders leave more.
+- **Satisfaction**: Low job satisfaction (<2) doubles turnover risk.
+- **Compensation**: Employees earning <$5,000/month have 25% attrition.
+- **Career Development**: No promotions in 3+ years increases turnover to 22%.
+
+## Visualizations
+- **Overview**: Cards for total employees, attrition rate; stacked bar for department breakdown.
+- **Demographics**: Pie charts for age/gender, heatmap for correlations.
+- **Satisfaction**: Gauges for satisfaction scores, Key Influencers for drivers.
+- **Compensation**: Scatter plot for income vs. attrition, box plot for salary distribution.
+- **Career Development**: Line chart for tenure, bar chart for promotions.
+
+## DAX Measures
+- `Attrition Rate = DIVIDE(COUNTROWS(FILTER(Table, [Attrition]="Yes")), COUNTROWS(Table))`
+- `Avg Job Satisfaction = AVERAGE(Table[JobSatisfaction])`
+- `Sales Attrition = CALCULATE([Attrition Rate], Table[Department]="Sales")`
+
+## Key Takeaways
+This analysis, built in Power BI, provides a robust framework for HR teams to identify and address attrition drivers, showcasing my skills in data transformation, visualization, and actionable insights.
